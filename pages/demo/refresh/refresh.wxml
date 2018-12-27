@@ -1,0 +1,11 @@
+<!--pages/demo/refresh/refresh.wxml-->
+<view class="page">
+  <view style="height:{{navHeight}}px">
+    <nav enableBack="true" navTitle="下拉刷新" sbHeight="{{sbHeight}}"></nav>
+  </view>
+  <refresh scrollHeight="{{scrollHeight}}" isRefreshFinish="{{isRefreshFinish}}" bindonRefresh="onRefresh">
+      <block wx:for="{{colors}}" wx:for-index="index" wx:key="index">
+        <view class="test-color" style="background: {{item}}">{{index + 1}}. {{item}}</view>
+      </block>
+  </refresh>
+</view>

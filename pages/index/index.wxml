@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">VMMiniComponents</view>
+    <view class="page__desc">VMMiniComponents 是自己封装的一些组件，方便其他开发者查看效果和理解使用，希望大家喜欢</view>
+  </view>
+  <view class="page__bd page__bd_spacing">
+    <view class="kind-list">
+      <block wx:for="{{list}}" wx:key="id">
+        <view class="kind-list__item">
+          <view id="{{item.id}}" class="weui-flex kind-list__item-hd {{item.open ? 'kind-list__item-hd_show' : ''}}">
+            <navigator url="../demo/{{item.page}}/{{item.page}}" class="weui-cell weui-cell_access">
+              <view class="weui-flex__item">{{item.name}}</view>
+            </navigator>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="page__ft">
+    <image src="images/icon_footer.png" style="width: 84px; height: 19px;"></image>
+  </view>
+</view>

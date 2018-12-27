@@ -1,0 +1,8 @@
+{
+  "enablePullDownRefresh": false,
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "nav": "../../components/nav/nav",
+    "refresh": "../../components/refresh/refresh"
+  }
+}

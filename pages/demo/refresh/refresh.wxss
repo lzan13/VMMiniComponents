@@ -1,0 +1,7 @@
+/* pages/demo/refresh/refresh.wxss */
+
+.test-color {
+  height: 144rpx;
+  line-height: 144rpx;
+  text-align: center;
+}

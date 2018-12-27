@@ -1,0 +1,10 @@
+<!--pages/demo/nav/nav.wxml-->
+<view class="page">
+  <view style="height:{{navHeight}}px">
+    <nav enableBack="true" navTitle="自定义导航" sbHeight="{{sbHeight}}"></nav>
+  </view>
+  <view class="page__hd">
+    <view class="page__title">自定义导航</view>
+    <view class="page__desc">自定义导航</view>
+  </view>
+</view>
