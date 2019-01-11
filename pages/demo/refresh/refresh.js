@@ -21,45 +21,11 @@ Page({
     let self = this;
     let colors = this.generateColors(20);
     this.setData({
-      sbHeight: app.common.sbHeight,
-      navHeight: app.common.navHeight,
-      scrollHeight: app.common.wHeight - app.common.navHeight,
+      sbHeight: app.data.dimen.sbHeight,
+      navHeight: app.data.dimen.navHeight,
+      scrollHeight: app.data.dimen.wHeight - app.data.dimen.navHeight,
       colors
     });
-  },
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
   },
 
   randomColor: function () {
@@ -86,7 +52,7 @@ Page({
         isRefreshFinish: true,
         colors
       });
-    }, 1000);
+    }, 2000);
   }
 
 })

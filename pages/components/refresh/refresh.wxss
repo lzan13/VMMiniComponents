@@ -18,6 +18,7 @@
   width: 24px;
   height: 24px;
   padding: 8px;
+  top: -40px;
   background: #f8f8f8;
   border-radius: 50%;
   box-shadow: 0px 0px 20px #d8d8d8;
@@ -31,66 +32,11 @@
   background: transparent url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/PjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+PHN2ZyB0PSIxNTQ1ODk4NzY2NTE0IiBjbGFzcz0iaWNvbiIgc3R5bGU9IiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjI0ODIiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PC9zdHlsZT48L2RlZnM+PHBhdGggZD0iTTUxMS4yOTYgMC4zODRDMjI4Ljk5MiAwLjM4NCAwIDIyOS41NjggMCA1MTIuMTkyIDAgNzk0Ljg4IDIyOC45OTIgMTAyNCA1MTEuMjk2IDEwMjRhNTExLjYxNiA1MTEuNjE2IDAgMCAwIDUxMS40ODgtNTExLjgwOEMxMDIyLjY1NiAyMjkuNTY4IDc5My42IDAuMzg0IDUxMS4yOTYgMC4zODR6IG0wIDk1NC4yNGMtMjQzLjcxMiAwLTQ0MS45ODQtMTk4LjQtNDQxLjk4NC00NDIuNDMyIDAtMjQzLjk2OCAxOTguMjcyLTQ0Mi40MzIgNDQxLjk4NC00NDIuNDMyIDI0My44NCAwIDQ0Mi4xMTIgMTk4LjQgNDQyLjExMiA0NDIuNDMyLTAuMDY0IDI0NC4wMzItMTk4LjI3MiA0NDIuNDMyLTQ0Mi4xMTIgNDQyLjQzMnoiIHAtaWQ9IjI0ODMiPjwvcGF0aD48cGF0aCBkPSJNNzA3LjI2NCAzNDMuNDg4YzAtMTYwLjEyOC0xODYuNzUyLTE2MC4xMjgtMTg2Ljc1Mi0xNjAuMTI4djMyMC4xOTJjLTAuMDY0IDAgMTg2Ljc1MiAwIDE4Ni43NTItMTYwLjA2NHpNMzQzLjQ4OCAzMTYuOGMtMTYwLjEyOCAwLTE2MC4xMjggMTg2Ljc1Mi0xNjAuMTI4IDE4Ni43NTJoMzIwLjE5MnMwLTE4Ni43NTItMTYwLjA2NC0xODYuNzUyek0zMTYuOCA2ODAuNjRjMCAxNjAgMTg2Ljc1MiAxNjAgMTg2Ljc1MiAxNjBWNTIwLjUxMnMtMTg2Ljc1MiAwLTE4Ni43NTIgMTYwLjEyOHpNNjgwLjY0IDcwNy4yNjRjMTYwIDAgMTYwLTE4Ni43NTIgMTYwLTE4Ni43NTJINTIwLjQ0OHMwIDE4Ni43NTIgMTYwLjE5MiAxODYuNzUyeiIgcC1pZD0iMjQ4NCI+PC9wYXRoPjwvc3ZnPg==) no-repeat center;
 }
 
-.refresh-normal {
-  width: 0px;
-  height: 0px;
-  padding: 0px;
-  -webkit-animation: animNormal 260ms 1;
-  animation: animNormal 260ms 1;
-}
-
-.refresh-pulling {
-  -webkit-animation: animPulling 260ms 1;
-  animation: animPulling 260ms 1;
-}
-
-.refresh-refreshing {
-  -webkit-animation: animRefreshing 260ms ease-out 1;
-  animation: animRefreshing 260ms ease-out 1;
-}
-
 .refresh-refreshing .refresh-icon {
   -webkit-animation: animRefreshingRoate 1s steps(12, end) infinite;
   animation: animRefreshingRoate 1s steps(12, end) infinite;
 }
 
-@keyframes animNormal {
-  0% {
-    top: 50px;
-    width: 24px;
-    height: 24px;
-    box-shadow: 0px 0px 20px #d8d8d8;
-  }
-
-  100% {
-    top: 0px;
-    width: 0px;
-    height: 0px;
-    box-shadow: 0px 0px 0px #d8d8d8;
-  }
-}
-
-@keyframes animPulling {
-  0% {
-    width: 0px;
-    height: 0px;
-  }
-
-  100% {
-    width: 24px;
-    height: 24px;
-  }
-}
-
-@keyframes animRefreshing {
-  0% {
-    top: 103px;
-  }
-
-  100% {
-    top: 50px;
-  }
-}
 
 @keyframes animRefreshingRoate {
   0% {
