@@ -1,32 +1,32 @@
 <!--pages/share/share.wxml-->
 
-<view class='style-container'>
-  <button class='btn-share' bindtap='handleTapOne'>样式一</button>
-  <button class='btn-share top-margin orange' bindtap='handleTapTwo'>样式二</button>
-  <button class='btn-share top-margin red' bindtap='handleTapThree'>样式三</button>
+<view class="page">
+  <view style="height:{{navHeight}}px">
+    <nav enableBack="true" navTitle="自定义导航" sbHeight="{{sbHeight}}"></nav>
+  </view>
+  <view class="page__hd">
+    <view class="page__title">自定义分享组件</view>
+    <view class="page__desc">通过 canvas 实现自定义分享图片的保存</view>
+  </view>
+  <view class="page__bd">
+    <button class='btn-share' bindtap='handleShare'>分享</button>
+    <button class='btn-share' bindtap='handleTapOne'>分享 - 样式一</button>
+    <button class='btn-share' bindtap='handleTapTwo'>分享 - 样式二</button>
+    <button class='btn-share' bindtap='handleTapThree'>分享 - 样式三</button>
+  </view>
+  <!-- 自定义分享组件 -->
+  <share createShare="{{share.isCreate}}" content="{{share.content}}"></share>
   <!-- 样式一 -->
-  <share-one 
-    avatar='{{ shareOne.avatar }}'
-    nickname='{{ shareOne.nickname }}'
-    showShareModel='{{ shareOne.showShareModel }}'
-  ></share-one>
+  <!-- <share-one avatar='{{shareOne.avatar}}' nickname='{{ shareOne.nickname }}' showShareModel='{{ shareOne.showShareModel }}'></share-one> -->
+
   <!-- 样式二 -->
-  <share-two 
-    avatar='{{ shareTwo.avatar }}'
-    nickname='{{ shareTwo.nickname }}'
-    incomeMoney='{{ shareTwo.incomeMoney }}'
-    joinNumber='{{ shareTwo.joinNumber }}'
-    joinAvatarList='{{ shareTwo.joinAvatarList }}'
-    adImageUrl='{{ shareTwo.adImageUrl }}'
-    adName='{{ shareTwo.adName }}'
-    adTime='{{ shareTwo.adTime }}'
-    showShareModel='{{ shareTwo.showShareModel }}'
-  ></share-two>
+  <!-- <share-two avatar='{{ shareTwo.avatar }}' nickname='{{ shareTwo.nickname }}' incomeMoney='{{ shareTwo.incomeMoney }}' joinNumber='{{ shareTwo.joinNumber }}' joinAvatarList='{{ shareTwo.joinAvatarList }}' adImageUrl='{{ shareTwo.adImageUrl }}' adName='{{ shareTwo.adName }}' -->
+  <!-- adTime='{{ shareTwo.adTime }}' showShareModel='{{ shareTwo.showShareModel }}'></share-two> -->
   <!-- 样式三 -->
-  <share-three
-    avatar='{{ shareThree.avatar }}'
-    nickname='{{ shareThree.nickname }}'
-    awardMoney='{{ shareThree.awardMoney }}'
-    showShareModel='{{ shareThree.showShareModel }}'
-  ></share-three>
+  <!-- <share-three avatar='{{ shareThree.avatar }}' nickname='{{ shareThree.nickname }}' awardMoney='{{ shareThree.awardMoney }}' showShareModel='{{ shareThree.showShareModel }}'></share-three> -->
+
+  <!-- 底部 -->
+  <view class="weui-footer weui-footer_fixed-bottom">
+    <view class="weui-footer__text">Copyright © 2018 vmloft.com</view>
+  </view>
 </view>

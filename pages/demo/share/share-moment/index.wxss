@@ -2,14 +2,13 @@
 
 .moment-root{
   width: 100%;
-  z-index: 11;
+  z-index: 999;
 }
 
 .share-canvas {
   width: 100%;
-  position: absolute;
-  top: 9999rpx;
-  left: 0;
+  position: fixed;
+  left: 999px;
 }
 
 /* components/dialog/bpb-dialog.wxss */

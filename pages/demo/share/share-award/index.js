@@ -1,7 +1,7 @@
 // components/share-arawd/index.js
 
 const app = getApp();
-const stringUtil = require('../../../utils/stringUtil.js');
+const vutil = require('../../../../utils/vmutil.js');
 
 var windowWidth;
 var windowHeight;
@@ -227,9 +227,9 @@ Component({
       ctx.setFontSize(16);
       ctx.setTextAlign('left');
       if (wx.canIUse('canvasContext.measureText')) {
-        let metrics = ctx.measureText(stringUtil.substringStr(that.data.nickname));
+        let metrics = ctx.measureText(vutil.subString(that.data.nickname));
         ctx.setFillStyle(THEME_COLOR);
-        ctx.fillText(stringUtil.substringStr(that.data.nickname), inviteTextScale * windowWidth, inviteTextHeightScale * windowHeight);
+        ctx.fillText(vutil.subString(that.data.nickname), inviteTextScale * windowWidth, inviteTextHeightScale * windowHeight);
         ctx.setFillStyle(GRAY_COLOR);
         ctx.fillText(that.data.detailStr.nickInvite, inviteTextScale * windowWidth + metrics.width + 10, inviteTextHeightScale * windowHeight);
       } else {
@@ -240,7 +240,7 @@ Component({
       ctx.setFillStyle(WHITE);
       ctx.setFontSize(20);
       ctx.setTextAlign('center');
-      ctx.fillText(stringUtil.substringStr(that.data.nickname), 0.5 * windowWidth, nicknameHeightScale * windowHeight);
+      ctx.fillText(vutil.subString(that.data.nickname), 0.5 * windowWidth, nicknameHeightScale * windowHeight);
 
       //绘制广告奖励
       ctx.setFillStyle(NORMAL_COLOR);

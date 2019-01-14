@@ -17,7 +17,8 @@
       </block>
     </view>
   </view>
-  <view class="page__ft">
-    <image src="images/icon_footer.png" style="width: 84px; height: 19px;"></image>
+  <!-- 底部 -->
+  <view class="weui-footer weui-footer_fixed-bottom">
+    <view class="weui-footer__text">Copyright © 2018 vmloft.com</view>
   </view>
 </view>

@@ -1,6 +1,6 @@
 // components/share-detail/index.js
 const app = getApp();
-const stringUtil = require('../../../utils/stringUtil.js');
+const vutil = require('../../../../utils/vmutil.js');
 
 var windowWidth;
 var windowHeight;
@@ -369,7 +369,7 @@ Component({
       ctx.setFontSize(16);
       ctx.setTextAlign('left'); 
       if (wx.canIUse('canvasContext.measureText')){
-        let metrics = ctx.measureText(stringUtil.substringStr(that.data.nickname));
+        let metrics = ctx.measureText(vutil.subString(that.data.nickname));
         ctx.fillText(that.data.detailStr.invite, nicknameWidthScale * windowWidth + metrics.width + 10, inviteHeightScale * windowHeight);
       }else{
         ctx.fillText(that.data.detailStr.invite, inviteWidthScale * windowWidth, inviteHeightScale * windowHeight);
@@ -394,7 +394,7 @@ Component({
       ctx.setFillStyle(THEME_COLOR);
       ctx.setFontSize(16);
       ctx.setTextAlign('left');
-      ctx.fillText(stringUtil.substringStr(that.data.nickname), nicknameWidthScale * windowWidth, nicknameHeightScale * windowHeight);
+      ctx.fillText(vutil.subString(that.data.nickname), nicknameWidthScale * windowWidth, nicknameHeightScale * windowHeight);
 
       //绘制金额
       ctx.setFillStyle(THEME_COLOR);

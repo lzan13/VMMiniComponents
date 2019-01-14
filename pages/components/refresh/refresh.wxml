@@ -1,8 +1,8 @@
 <!--pages/components/refresh/refresh.wxml-->
-<scroll-view class="refresh-view" scroll-y="true" bindscrolltoupper="_onScrollTop" bindscroll="_onScroll" bindscrolltolower="_onScrollBottom" bindtouchstart="_onTouchStart" bindtouchend="_onTouchEnd" style="height:{{scrollHeight}}px;">
-  <view class="refresh-view-top">
-    <view class="refresh-status refresh-{{pullStatus}}" style="top:{{pullHeight-40}}px;" animation="{{animation}}">
-      <view class="refresh-icon"></view>
+<scroll-view class="vm-refresh" scroll-y="true" bindscrolltoupper="_onScrollTop" bindscroll="_onScroll" bindscrolltolower="_onScrollBottom" bindtouchstart="_onTouchStart" bindtouchend="_onTouchEnd" style="height:{{scrollHeight}}px;">
+  <view class="vm-refresh-top">
+    <view class="vm-refresh-status vm-refresh-{{pullStatus}}" style="top:{{pullHeight-40}}px;" animation="{{animation}}">
+      <view class="vm-refresh-icon"></view>
     </view>
   </view>
   <view bindtouchmove="_onTouchMove">

@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/demo/nav/nav",
-    "pages/demo/refresh/refresh"
+    "pages/demo/refresh/refresh",
+    "pages/demo/share/share"
   ],
   "window": {
     "backgroundTextStyle": "light",

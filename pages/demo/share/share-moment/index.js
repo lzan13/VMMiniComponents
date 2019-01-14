@@ -4,7 +4,7 @@
  */
 
 const app = getApp();
-const stringUtil = require('../../../utils/stringUtil.js');
+const vutil = require('../../../../utils/vmutil.js');
 
 var windowWidth;
 var windowHeight;
@@ -241,7 +241,7 @@ Component({
       ctx.setFillStyle(WHITE);
       ctx.setFontSize(20);
       ctx.setTextAlign('center');
-      ctx.fillText(stringUtil.substringStr(that.data.nickname), windowWidth / 2, nicknameHeightScale * windowHeight);
+      ctx.fillText(vutil.subString(that.data.nickname), windowWidth / 2, nicknameHeightScale * windowHeight);
 
       //绘制文字一起赚
       ctx.setFillStyle(THEME_COLOR);

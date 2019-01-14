@@ -25,12 +25,12 @@ const formatNumber = n => {
  * "可以用 {key} 字符串替换占位符 {one} {two} {three}".format({one: "I",two: "LOVE",three: "YOU"});
  * "可以用 {1} 自符串替换占位符 {1} {2} {0} ".format("I","LOVE","YOU");
  */
-const formatStr = function () {
+const formatStr = function() {
   if (arguments.length == 0) return "";
   var str = arguments[0];
   if (arguments.length == 1) return str;
   var param = arguments[1];
-  if (typeof (param) == 'object') {
+  if (typeof(param) == 'object') {
     for (var key in param)
       str = str.replace(new RegExp("\\{" + key + "\\}", "g"), param[key]);
     return str;
@@ -41,10 +41,25 @@ const formatStr = function () {
   }
 }
 
+
+function subString(target) {
+  if (target && target.length > 12) {
+    target = target.replace(/\uD83C[\uDF00-\uDFFF]|\uD83D[\uDC00-\uDE4F]/g, "");
+    if (!target) {
+      return '匿名';
+    } else {
+      return target.slice(0, 12) + '...';
+    }
+  }
+  return target;
+}
+
+
 /**
  * 将方法暴露出去
  */
 module.exports = {
   formatTime: formatTime,
-  formatStr: formatStr
+  formatStr: formatStr,
+  subString: subString
 }

@@ -1,13 +1,11 @@
 <!--components/nav/nav.wxml-->
-<view class="nav-container">
-  <view class="nav-statusbar" style="height:{{sbHeight}}px;"></view>
-  <view class="nav-toolbar weui-flex">
-    <view class="nav-back" wx:if="{{enableBack}}" bindtap="_onBack">
-      <view class="nav-back-icon"></view>
+<view class="vm-nav">
+  <view class="vm-nav-statusbar" style="height:{{sbHeight}}px;"></view>
+  <view class="vm-nav-toolbar">
+    <view class="vm-nav-back" wx:if="{{enableBack}}" bindtap="_onBack">
+      <view class="vm-nav-back-icon"></view>
     </view>
-    <view class="nav-space" wx:else></view>
-    <view class="weui-flex__item">
-      <view class="nav-title">{{navTitle}}</view>
-    </view>
+    <view class="vm-nav-space" wx:else></view>
+    <view class="vm-nav-title">{{navTitle}}</view>
   </view>
 </view>

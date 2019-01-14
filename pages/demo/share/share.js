@@ -1,10 +1,18 @@
 // pages/share/share.js
+
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    sbHeight: 0,
+    navHeight: 0,
+    share: {
+      isCreate: false,
+      content: "测试绘制文字"
+    },
     shareOne: {
       avatar: '',
       nickname: '',
@@ -33,18 +41,30 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  onLoad: function(options) {
+    this.setData({
+      sbHeight: app.data.dimen.sbHeight,
+      navHeight: app.data.dimen.navHeight,
+    });
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
-  handleTapOne: function () {
+  handleShare: function() {
+    this.setData({
+      share: {
+        isCreate: true,
+        content: "嗨 VMTalk"
+      }
+    });
+  },
+
+  handleTapOne: function() {
     this.setData({
       shareOne: {
         avatar: 'https://wx.qlogo.cn/mmopen/vi_32/gcs9nfrPIjZSfZvMmVCK81MpPbWqDspNfc2lRLqllfrpYT61RQWNMHXCfzSia7OiapOfXTjYFR6EF7JQZib5MRCdA/132',
@@ -54,7 +74,7 @@ Page({
     })
   },
 
-  handleTapTwo: function () {
+  handleTapTwo: function() {
     this.setData({
       shareTwo: {
         avatar: 'https://wx.qlogo.cn/mmopen/vi_32/gcs9nfrPIjZSfZvMmVCK81MpPbWqDspNfc2lRLqllfrpYT61RQWNMHXCfzSia7OiapOfXTjYFR6EF7JQZib5MRCdA/132',
@@ -70,7 +90,7 @@ Page({
     })
   },
 
-  handleTapThree: function () {
+  handleTapThree: function() {
     this.setData({
       shareThree: {
         avatar: 'https://wx.qlogo.cn/mmopen/vi_32/gcs9nfrPIjZSfZvMmVCK81MpPbWqDspNfc2lRLqllfrpYT61RQWNMHXCfzSia7OiapOfXTjYFR6EF7JQZib5MRCdA/132',
