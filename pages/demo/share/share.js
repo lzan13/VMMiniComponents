@@ -1,6 +1,8 @@
 // pages/share/share.js
 
 const app = getApp();
+const vlog = require("../../../utils/vmlog.js");
+
 Page({
 
   /**
@@ -10,8 +12,9 @@ Page({
     sbHeight: 0,
     navHeight: 0,
     share: {
-      isCreate: false,
-      content: "测试绘制文字"
+      create: false,
+      content: "测试绘制文字",
+      from: ""
     },
     shareOne: {
       avatar: '',
@@ -58,8 +61,9 @@ Page({
   handleShare: function() {
     this.setData({
       share: {
-        isCreate: true,
-        content: "嗨 VMTalk"
+        create: true,
+        content: "嗨 VMTalk, 小程序canvas文本绘制自动换行、字体加粗简单实现，注意，以上是简单的实现，所以如果有英文会计算不精确，解决方法如下：优化原理：通过基础库 1.9.90 开始支持的measureText接口返回的文本宽度，把每个字符宽度不断累加，精确计算在哪个位置应该换行去实现这个功能。",
+        from:"「 测试 」"
       }
     });
   },

@@ -1,12 +1,12 @@
-<!--pages/demo/share/sharecanvas/index.wxml-->
+<!--pages/demo/share/share/share.wxml-->
 <view class="vm-share">
   <canvas class="vm-share-canvas" canvas-id="shareCanvas" style="height:{{cHeight}}px;"></canvas>
 
-  <view class="vm-share-content" wx:if="{{isShow}}" bindtap="_closeShare" style="height:{{cHeight}}px;">
+  <view wx:if="{{isShow}}" class="vm-share-content" bindtap="_closeShare" style="width:{{cWidth}}px; height:{{cHeight}}px;">
     <image class="vm-share-image" style="width:{{imageWidth}}px; height:{{imageHeight}}px;" src="{{shareImagePath}}"></image>
 
     <view class="vm-btn-container">
-      <view class="vm-btn-save-share" bindtap="saveShare">保存</view>
+      <view class="vm-btn-save-share" bindtap="_requestAlbumScope">保存</view>
       <view class="vm-btn-close-share" bindtap="_closeShare">取消</view>
     </view>
   </view>

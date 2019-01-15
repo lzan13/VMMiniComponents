@@ -11,6 +11,7 @@ App({
       sbHeight: 24,
       tbHeight: 48,
       navHeight: 72,
+      wWidth: 375, // 这个是以 375*667 为基准进行预设
       wHeight: 667, // 这个是以 375*667 为基准进行预设
     }
   },
@@ -25,6 +26,7 @@ App({
         //导航高度
         this.data.dimen.sbHeight = res.statusBarHeight;
         this.data.dimen.navHeight = this.data.dimen.sbHeight + this.data.dimen.tbHeight;
+        this.data.dimen.wWidth = res.windowWidth;
         this.data.dimen.wHeight = res.windowHeight;
       },
       fail(err) {

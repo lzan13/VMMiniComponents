@@ -1,15 +1,16 @@
-/* pages/demo/share/sharecanvas/index.wxss */
+/* pages/demo/share/share/share.wxss */
 
 .vm-share {
   position: fixed;
   width: 100%;
+  z-index: 100;
 }
 
 .vm-share-canvas {
   position: fixed;
-  width: 100%;
   top: 0;
-  left: 0;
+  left: 999px;
+  width: 100%;
 }
 
 .vm-share-content {
@@ -17,18 +18,15 @@
   flex-direction: column;
   justify-content: center;
   position: fixed;
-  width: 100%;
   left: 0;
   top: 0;
-  padding-top: 16%;
-  z-index: 100;
+  width: 100%;
   background: rgba(0, 0, 0, 0.5);
 }
 
 .vm-share-image {
   border-radius: 4px;
   margin: 0 auto;
-  background: rgba(10, 200, 10, 0.5);
 }
 
 /* 底部按钮容器 */

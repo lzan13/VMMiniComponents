@@ -2,7 +2,7 @@
   
   "usingComponents": {
     "nav": "../../components/nav/nav",
-    "share": "./sharecanvas/index",
+    "share": "../../components/share/share",
     "share-one": "./share-moment/index",
     "share-two": "./share-detail/index",
     "share-three": "./share-award/index"

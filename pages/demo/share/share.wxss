@@ -13,3 +13,6 @@
 button::after{
   border: none;
 }
+.btn-share:active{
+  background: #00ff00;
+}

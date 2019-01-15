@@ -15,7 +15,7 @@
     <button class='btn-share' bindtap='handleTapThree'>分享 - 样式三</button>
   </view>
   <!-- 自定义分享组件 -->
-  <share createShare="{{share.isCreate}}" content="{{share.content}}"></share>
+  <share create="{{share.create}}" content="{{share.content}}" from="{{share.from}}"></share>
   <!-- 样式一 -->
   <!-- <share-one avatar='{{shareOne.avatar}}' nickname='{{ shareOne.nickname }}' showShareModel='{{ shareOne.showShareModel }}'></share-one> -->
 
